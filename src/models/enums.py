@@ -1,0 +1,34 @@
+from enum import Enum
+
+class Decision(Enum):
+    NONE = "NONE"
+    USED_HUMAN = "USED_HUMAN"
+    USED_SUPPLIER_PLUS_BIAS = "USED_SUPPLIER_PLUS_BIAS"
+    USED_HISTORIC_PLUS_BIAS = "USED_HISTORIC_PLUS_BIAS"
+    FALLBACK = "FALLBACK"
+
+class Flag(Enum):
+    HUMAN_OVERRIDE_ACCEPTED = "HUMAN_OVERRIDE_ACCEPTED"
+    HUMAN_REJECTED = "HUMAN_REJECTED"
+    ANOMALY_REJECTED = "ANOMALY_REJECTED"
+    
+class PricingSource(Enum):
+    HUMAN = "HUMAN"
+    SUPPLIER = "SUPPLIER"
+    HISTORIC = "HISTORIC"
+
+class PricingOutcome(Enum):
+    NONE = "NONE"
+    QUOTE_ACCEPTED = "QUOTE_ACCEPTED"
+    QUOTE_REJECTED = "QUOTE_REJECTED"
+
+class EchoEventStatus(Enum):
+    SUCCESS = "SUCCESS"
+    FAILED = "FAILED"
+
+class MutableValueType(Enum):
+    FLAG = "FLAG"
+    FINAL_PRICE_CENTS = "FINAL_PRICE_CENTS"
+    DECISION = "DECISION"
+    CANDIDATE = "CANDIDATE"
+    BIAS = "BIAS"
